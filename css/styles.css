@@ -338,7 +338,7 @@ header h2 {
 
 /*----------- NAVIGATION --------------*/
 nav {
-  background-color: #fac49a; }
+  background-color: #758cdc; }
   nav button {
     position: absolute;
     padding: .4rem;
@@ -390,13 +390,13 @@ nav ul#navMenu li:hover {
     background-color: #0f2651; }
 
 nav ul li.active a {
-  background-color: #43b683;
-  color: #c2e9d8; }
+  background-color: #1b4492;
+  color: white; }
 
 ul#navMenu li.active {
-  background-color: #65c69c; }
+  background-color: #2358bd; }
   ul#navMenu li.active a {
-    background-color: #65c69c; }
+    background-color: #2358bd; }
 
 #navMenu > li:hover > a {
   background: rgba(0, 0, 0, 0.5); }
@@ -441,11 +441,13 @@ main {
       background-color: #2762d2;
       color: white; }
     main section#weatherForecast img {
-      width: 50px; }
+      width: 50px;
+      text-align: center; }
   main img#weather_icon {
     width: 50px;
     max-width: 50px;
-    height: auto; }
+    height: auto;
+    text-align: center; }
   main section {
     border: solid #a4beee 2px;
     background-color: #2762d2;
@@ -510,8 +512,7 @@ button {
     display: none; }
   nav ul {
     display: none;
-    display: flex;
-    justify-content: center; }
+    display: flex; }
   nav ul li {
     border-right: 1px solid rgba(0, 0, 0, 0.096); }
   nav ul li a {
@@ -527,7 +528,7 @@ button {
     float: right; }
   nav ul li ul li {
     border-right: none;
-    border-top: solid 1px #f79951;
+    border-top: solid 1px #385acc;
     border: none; }
   nav ul li:hover ul {
     left: auto;

@@ -100,13 +100,13 @@ nav ul#navMenu li:hover{
     } 
 }
     nav ul li.active a{
-        background-color: lighten($secondaryColor, 5%);
+        background-color: lighten($tritaryColor, 5%);
         color: lighten($secondaryColor, 40%);
     }
     ul#navMenu li.active{
-        background-color: lighten($secondaryColor,15%);
+        background-color: lighten($tritaryColor,15%);
         a{
-            background-color: lighten($secondaryColor,15%);
+            background-color: lighten($tritaryColor,15%);
         }
     
     }
@@ -164,13 +164,15 @@ main{
     }
     img{
         width: 50px;
-
+        text-align: center;
 }
 }
 img#weather_icon{
     width: 50px;
     max-width: 50px;
     height: auto;
+    text-align: center;
+    
 }
 section{
     border: solid lighten($tritaryColor,50%) 2px;
