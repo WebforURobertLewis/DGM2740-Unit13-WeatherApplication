@@ -1,0 +1,217 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+    background-color: lighten($tritaryColor, 60%);
+} 
+ 
+
+/*----------- HEADER --------------*/ 
+header {
+    padding: .5rem 2%;
+    background-color: $tritaryColor;
+    color: white;
+    h1{
+        font-size: 32px;
+    }
+}
+header h1 {margin: 0;}
+header h2 {margin: 0; font-weight: normal; font-size: 16px;}
+
+/*----------- NAVIGATION --------------*/
+
+nav { 
+    background-color: lighten($primaryColor,15%);
+    
+
+    button{
+        position: absolute;
+        padding: .4rem;
+        background-color: lighten($tritaryColor, 70%);
+        border: none;
+        font-size: 1.5rem;
+        top: 5px;
+        right: 5px;
+        color: $buttonColor;
+        border-radius: 3px;
+        z-index: 1;
+
+        }
+       
+        //toggle the hamburger menu and the close (X)
+        //hide one to show the other one, and when it is open, reverse them
+        button span:nth-child(1){display: block;}
+        button span:nth-child(2){display: none;}
+        button.classOpen span:nth-child(1){display:none;} //dont show me the burger when it's open
+        button.classOpen span:nth-child(2){display: block;}//when it has a class of open, displays as a block
+        //end button
+
+    ul {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+    }
+
+    ul.classOpen { //pulls from JavaScript
+        display: block; //opposite of none in ul{display:none}
+        transition: all .5s ease-in;
+
+    }
+    ul li a {
+
+  
+    display: block; //must be displayed as a block to apply padding
+    border-bottom: .1px solid #ffffffc7;
+    padding: .9rem 2vw;
+    font-size: .9rem;
+    padding-left: 1rem;
+    background-color: lighten($tritaryColor, 45%);
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color .2s ease-in;
+
+    }
+
+
+    ul li a:hover {
+    background-color: darken($tritaryColor, 50%);
+    color: #fff;
+    transition: all .2s ease-in;
+    
+    }
+
+}
+nav ul#navMenu li:hover{
+    color: #fff;
+    background-color: lighten($tritaryColor, 30%);
+    a:hover{
+        color: #fff;
+        background-color: darken($tritaryColor, 10%);
+    } 
+}
+    nav ul li.active a{
+        background-color: lighten($secondaryColor, 5%);
+        color: lighten($secondaryColor, 40%);
+    }
+    ul#navMenu li.active{
+        background-color: lighten($secondaryColor,15%);
+        a{
+            background-color: lighten($secondaryColor,15%);
+        }
+    
+    }
+
+#navMenu > li:hover > a {background: rgba(0,0,0,.5); }
+#navMenu li.parent > a::after{
+    
+    font-size: .75rem;
+    content: "\25BC";
+    justify-content: center;
+    color: #000000da;
+    float: right;
+}
+
+//Hide the sub menu items by default
+#navMenu li ul{
+    background: rgba(0,0,0,.1);
+    padding: 0;
+}
+#navMenu li ul a{
+    border-top: solid 1px rgba(0,0,0,0.2);
+    font-size: 14px;
+    padding: 10px 5%;
+    
+}
+#navMenu li:hover ul{
+    display: block;
+    transition: all .5s ease-in;
+
+}
+nav #navMenu.classOpen{
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    opacity: 100%;
+    transition: opacity 12s ease-in;
+}
+
+/*----------- MAIN --------------*/
+
+
+main{
+    margin-bottom: 12vh;
+    section#weatherForecast{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    background-color: lighten($tritaryColor, 50%);
+    section{
+        border: solid lighten($tritaryColor,50%) 2px;
+        
+        background-color: lighten($tritaryColor,20%);
+        color: white;
+       
+    }
+    img{
+        width: 50px;
+
+}
+}
+img#weather_icon{
+    width: 50px;
+    max-width: 50px;
+    height: auto;
+}
+section{
+    border: solid lighten($tritaryColor,50%) 2px;
+    background-color: lighten($tritaryColor,20%);
+    color: white;
+    text-align: center;
+}
+h1, h2{
+    padding: 0, 2em;
+    text-align: center;
+}
+p{
+    text-align: center;
+    font-size: larger;
+}
+    img{
+        text-align: center;
+    }
+}
+
+
+/*----------- FOOTER --------------*/
+footer {
+    background-color: $tritaryColor;
+    padding: .5rem 2%;
+    text-align: center;
+    color: white;
+}
+
+button{
+    margin:0;
+    align-self: start;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

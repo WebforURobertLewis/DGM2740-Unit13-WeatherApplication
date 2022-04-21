@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Weather">
+    <meta name="author" content="Robert Lewis">
+    <title>Weather by Robert Lewis</title>
+<!--keeps font from enlarging when phone is turned sideways-->
+    <meta name="viewport" content="width=device-width, initial-scale = 1, maximum-scale=1">
+
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+
+
+<body>
+    <header>
+        <h1>WeatherHall</h1>
+        <h2>Built with AJAX and JSON</h2>
+
+    </header>
+    <div class="navWrapper">
+<nav class="clearfix">
+    <button id="burger"><span>&#9776;</span><span>x</span></button>
+
+    <ul id="navMenu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Forcast</a></li>
+        <li><a href="#">Major Weather</a></li>
+        <li><a href="#">Contact Us</a></li>
+
+    </ul>
+
+</nav>
+</div>
+<main>
+    <h1>Forcast</h1>
+    <h2>5 Day Forecast for <span id="place"></span></h2>
+    <section>
+        <figure>
+            <p id="TodayHeading">Today</p>
+            <p id="day1"></p>
+            <p><span id="currentTemp"></span>&deg; F</p><br>
+            <img id="weather_icon" src="#" alt="current weather">
+        </figure>
+    </section>
+
+
+    <p>High <span id="highTemp"></span>&deg;F</p>
+    <p>Low <span id="minTemp"></span>&deg;F</p>
+    <p>Wind <span id="windSpeed"></span> MPH</p>
+    <section id="weatherForecast"></section>
+</main>
+
+<footer>&copy; 2022 &bull; Robert Lewis &bull; 123-321-4567</footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

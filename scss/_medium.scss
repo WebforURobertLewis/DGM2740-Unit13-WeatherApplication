@@ -1,0 +1,99 @@
+
+
+
+/*----------- BODY --------------*/
+
+
+
+/*----------- HEADER --------------*/
+main{
+    section#weatherForecast{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        border: solid $tritaryColor 4px;
+        background-color: lighten($tritaryColor, 50%);
+        section{
+            border: solid lighten($tritaryColor,50%) 2px;
+            background-color: lighten($tritaryColor,20%);
+            color: white;
+        }
+
+    }
+    section{
+        border: solid lighten($tritaryColor,50%) 2px;
+        background-color: lighten($tritaryColor, 50%);
+        color: white;
+        
+    }
+    figure{
+        background-color: lighten($tritaryColor,20%);
+        border: solid lighten($tritaryColor,10%) 2px;
+
+
+    }
+}
+
+/*----------- NAVIGATION --------------*/
+nav #navMenu.classOpen{
+    position:relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+nav{
+
+
+    button{
+        display: none;
+    }
+    ul{
+        display: none;
+        display: flex;
+        justify-content: center;
+    }
+    ul li {border-right: 1px solid rgba(0, 0, 0, 0.096);}
+    ul li a{
+        display: block;
+        font-size: 1rem;
+        padding: .9rem 1.2rem;
+        border-bottom: none;
+        top: 0;
+    }
+
+    #navMenu li.parent > a:after{
+        content: "\25BC";
+        font-size: .65rem;
+        color: black;
+        float: right;
+    }
+
+    ul li ul li {
+        border-right: none;
+        border-top: solid 1px $primaryColor;
+        border:none;
+    }
+    ul li:hover ul{
+        left: auto;
+        margin-left: 0;
+    }
+    li.active a{
+        background-color: #388E8F;
+    }
+}
+ul.classOpen{
+    display: none;
+    top: 0;
+}
+
+
+/*----------- MAIN --------------*/
+
+section{
+    padding: 2vw;
+}
+div span p{
+    padding: 0;
+}
+
+/*----------- FOOTER --------------*/
+    
